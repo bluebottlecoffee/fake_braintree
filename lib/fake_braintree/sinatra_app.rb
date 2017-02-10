@@ -212,7 +212,7 @@ module FakeBraintree
           hash_from_request_body_with_key('credit_card')
         else
           payment_method_hash = hash_from_request_body_with_key('payment_method')
-          nonce = payment_method_hash.delete('payment_method_nonce')
+          nonce = payment_method_hash['payment_method_nonce']
           h = FakeBraintree.registry.payment_methods
           h[nonce] = (h[nonce] || {}).merge(payment_method_hash)
         end
