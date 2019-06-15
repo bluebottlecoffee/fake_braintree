@@ -1,3 +1,3 @@
-source 'http://rubygems.org'
+source 'http://nebula.prod.int'
 
 gemspec
